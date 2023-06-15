@@ -26,6 +26,7 @@ html,body{
     min-width: 100%;
     position: sticky;
     top: 0;
+  
     
     
     display: flex;
@@ -47,6 +48,7 @@ html,body{
     font-weight: 600;
     padding: 0 10rem;
     font-size: 1.6rem;
+    
  
 }
 
@@ -57,8 +59,9 @@ a{
 
 .nav-header img{
     min-width: 5rem;
-    width: 15rem;
+    width: 12rem;
     margin-right: auto;
+    
    
 }
 
@@ -66,8 +69,12 @@ a{
     font-size: large;
     font-weight: 900;
     text-decoration: underline;
+   
 }
 
+.nav-inactive{
+    color: #551a8e;
+}
 
 
 .nav-header a:active{
@@ -157,16 +164,28 @@ quote{
     gap: 1rem;   
 }
 
-
+/* media queries  */
 @media (min-width: 600px) {
     .skillset-images { grid-template-columns: repeat(2, 1fr); }
+    .certificates-container { grid-template-columns: repeat(1, 1fr);}
   }
   
  
   @media (min-width: 900px) {
     .skillset-images { grid-template-columns: repeat(4, 1fr); }
-  }
+    .certificates-container { grid-template-columns: repeat(2, 1fr); }
 
+    /* section{
+        display: grid;
+        place-items: center;
+        align-content: center;
+        min-height: 100vh;
+       
+    } */
+}
+
+   
+/* end of media queries  */
 
 .skillset-quote{
     padding: 3rem;
@@ -194,3 +213,56 @@ quote{
     visibility: visible;
 }
 
+.certificates-container{
+    display: grid;
+    gap: 5rem;
+    padding: 10rem;
+    
+}
+
+.certificates-container h1,h2,h3{
+    color: white    ;
+   font-size: large;
+   
+}
+
+.certificates-container figure{
+    text-align: center;
+    background-color: #551a8e;
+    padding: 3rem;
+    border-radius: 2rem;
+    margin-trim: block;
+}
+
+.certificates-container h2{
+    font-style: italic;
+}
+
+.certificates-container h3{
+    text-align: right;
+}
+
+
+
+.filter-year-buttons button{
+    padding: 1rem 3rem; 
+    margin: 2rem 1rem -3rem 5rem;
+    border: none;
+    font-family: "Inter",sans-serif;
+    background-color: #af87cf;
+    color: black;
+    border-radius: 1.5rem;
+    width: 15rem;
+    align-self: center;
+}
+.filter-year-buttons h1{
+    font-family: "Caveat";
+    color: #562d7a;
+    padding: 2rem 0rem 0rem 5rem;
+    font-size: x-large;
+}
+
+.filter-year-buttons .selected{
+    background-color: #562d7a;
+    color: white;
+}
