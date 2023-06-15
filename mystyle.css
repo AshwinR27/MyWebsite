@@ -13,12 +13,14 @@ html,body{
     background-color: #F0F0F7;
     user-select: none;
     font-size: 62.5%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .site-wrapper{
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    flex-wrap: nowrap;
     min-height: 100vh;
 }
 
@@ -44,9 +46,9 @@ html,body{
 .nav-header-elements{
     display: flex;
     align-items: center;
-    gap: 45px;
+    gap: 50px;
     font-weight: 600;
-    padding: 0 10rem;
+    padding: 0 5rem;
     font-size: 1.6rem;
     
  
@@ -165,28 +167,50 @@ quote{
 }
 
 /* media queries  */
-@media (min-width: 600px) {
-    .skillset-images { grid-template-columns: repeat(2, 1fr); }
-    .certificates-container { grid-template-columns: repeat(1, 1fr);}
-  }
-  
- 
-  @media (min-width: 900px) {
-    .skillset-images { grid-template-columns: repeat(4, 1fr); }
-    .certificates-container { grid-template-columns: repeat(2, 1fr); }
 
-    /* section{
+@media screen and (max-width:900px) {
+    .skillset-images { grid-template-columns: repeat(2, 1fr); }
+    .actual-filter-buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
         display: grid;
         place-items: center;
         align-content: center;
-        min-height: 100vh;
-       
-    } */
+    }
+
+    
+}
+
+
+  
+ 
+  @media screen and (min-width: 901px) {
+    .skillset-images { grid-template-columns: repeat(4, 1fr); }
+    
+    .certificates-container { grid-template-columns: repeat(2, 1fr); }
+    
+    .actual-filter-buttons{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: center;
+        
+  
+    }
+    
 }
 
    
 /* end of media queries  */
-
+/* section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+   
+} */
 .skillset-quote{
     padding: 3rem;
     color: white;
@@ -246,23 +270,40 @@ quote{
 
 .filter-year-buttons button{
     padding: 1rem 3rem; 
-    margin: 2rem 1rem -3rem 5rem;
+    margin: .5rem;
     border: none;
     font-family: "Inter",sans-serif;
     background-color: #af87cf;
-    color: black;
+    color: aliceblue;
     border-radius: 1.5rem;
     width: 15rem;
     align-self: center;
+    font-size: medium;
 }
 .filter-year-buttons h1{
     font-family: "Caveat";
     color: #562d7a;
-    padding: 2rem 0rem 0rem 5rem;
-    font-size: x-large;
+    margin-top: 5rem;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.filter-year-buttons button:hover{
+    background-color: #563572;
+
+}
+
+.filter-year-buttons .selected:hover{
+    background-color: #562d7a;
+
+   
 }
 
 .filter-year-buttons .selected{
     background-color: #562d7a;
     color: white;
+   
 }
+
+
+

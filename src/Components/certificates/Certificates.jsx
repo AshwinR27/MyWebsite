@@ -51,10 +51,11 @@ export default function Certificates(){
         
 
     return(
-        <>
+        <section>
         
             <div className="filter-year-buttons">
                 <h1>Filter My Certificates by year</h1>
+                <div className="actual-filter-buttons">
                 <button
                 onClick={() => handleFilterChange("year","2020")}
                 className={`year-2020 
@@ -76,16 +77,18 @@ export default function Certificates(){
                 className={yearFilter === '2023'? "selected": ""} >
                     2023
                 </button>
+                
                 {yearFilter && <button
                 onClick={() => handleFilterChange("year",null)}
                 className="year-clear" >
                     Clear filter
                 </button>}
+                </div>
             </div>
             
            
                 <div className="certificates-container">{mappedCertificatesData}</div>
             
-        </>
+        </section>
     )
 }
