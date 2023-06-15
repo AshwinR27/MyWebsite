@@ -3,7 +3,8 @@ import { initializeApp } from "firebase/app";
 import {
   getFirestore,
   collection,
-  getDocs
+  getDocs,
+  
 } from "firebase/firestore"
 
 
@@ -25,7 +26,7 @@ const certificatesCollectionRef = collection(db, "certificates")
 export default async function getCertificates(){
   const querySnapshot = await getDocs(certificatesCollectionRef)
   const mappedArr = querySnapshot.docs.map(doc => ({
-    ...doc.data,
+    ...doc.data(),
     id: doc.id
   }))
   return mappedArr
