@@ -1,4 +1,5 @@
 import React from "react";
+import {getCertificates} from "../../firebase"
 
 export default function Certificates(){
     return(

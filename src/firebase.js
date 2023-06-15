@@ -4,7 +4,7 @@ import {
   getFirestore,
   collection,
   getDocs
-} from "firebase/firestore"
+} from "firebase/firestore/lite"
 
 
 const firebaseConfig = {
