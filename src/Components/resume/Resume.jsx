@@ -18,8 +18,8 @@ function Resume() {
     <embed src="resume/Ashwin_Prabhu_Resume.pdf" width="450" height="630" 
     type="application/pdf"></embed>
     <div className="resume-download">
-        <h1>Click here to download my resume</h1>
-        <a target=" _blank" href="resume/Ashwin_Prabhu_Resume.pdf"><button>Download &#128317;</button></a>
+        <h1>Click here to download my Resume</h1>
+        <a target=" _blank" href="resume/Ashwin_Prabhu_Resume.pdf"><button className="button-transition">Download ⇓</button></a>
     </div>
     
     </div>

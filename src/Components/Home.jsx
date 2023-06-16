@@ -21,23 +21,25 @@ export default function Home(){
            <section>
                 <div className="intro">
                     <img src="home/ProfileImage.png" />
-                    <quote className="intro-quote">Hey there! I'm Ashwin, a passionate CS Engineer constantly 
+                    <h1 className="intro-quote">Hey there! I'm Ashwin, a passionate CS Engineer constantly 
                         seeking out exciting opportunities 
                         to expand my skillset and put 
-                        them into action.</quote>
+                        them into action.</h1>
                 </div>
             
                 </section>
-                <section>
+                
                 <div className="skillset">
-                    <quote className="skillset-quote">These are some of the skills I have accumulated throughout the years.</quote>
-                    <div className="skillset-images">
-                     
-                        {mappedSkills}
+                    <section>
+                        <h1 className="skillset-quote">These are some of the skills I have accumulated throughout the years.</h1>
+                        <div className="skillset-images">
+                        
+                            {mappedSkills}
 
-                    </div>
+                        </div>
+                    </section>
                 </div>
-                </section>
+                
             
 
             <h1>Etc</h1>
