@@ -179,7 +179,14 @@ quote{
         place-items: center;
         align-content: center;
     }
-
+    .resume-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 5rem;
+    }
     
 }
 
@@ -199,18 +206,18 @@ quote{
         
   
     }
-    
+    section{
+        display: grid;
+        place-items: center;
+        align-content: center;
+        min-height: 100vh;
+       
+    }
 }
 
    
 /* end of media queries  */
-/* section{
-    display: grid;
-    place-items: center;
-    align-content: center;
-    min-height: 100vh;
-   
-} */
+
 .skillset-quote{
     padding: 3rem;
     color: white;
@@ -279,6 +286,7 @@ quote{
     width: 15rem;
     align-self: center;
     font-size: medium;
+    cursor: pointer;
 }
 .filter-year-buttons h1{
     font-family: "Caveat";
@@ -305,5 +313,42 @@ quote{
    
 }
 
+/* iframe{
+    width: 40rem;
+    height: 55rem;
+    
+    border: none;
+} */
 
+.resume-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    padding: 5rem;
+}
 
+.resume-container button{
+    padding: 2rem 10rem;
+    background-color: #6a2ba6;
+    font-family: "Inter",sans-serif;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+}
+
+.resume-container button:hover{
+    background-color: #310b55;
+}
+
+.resume-download{
+    font-family: "Caveat",sans-serif;
+    color: #562d7a;
+    font-size: large;
+    text-align: center;
+}
+
+.resume-container embed{
+   
+    box-shadow: 1rem 1rem 7rem 0rem #551a8e;
+}

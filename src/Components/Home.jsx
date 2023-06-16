@@ -18,7 +18,7 @@ export default function Home(){
 
     return(
         <div className="home-container">
-           
+           <section>
                 <div className="intro">
                     <img src="home/ProfileImage.png" />
                     <quote className="intro-quote">Hey there! I'm Ashwin, a passionate CS Engineer constantly 
@@ -27,8 +27,8 @@ export default function Home(){
                         them into action.</quote>
                 </div>
             
-        
-                   
+                </section>
+                <section>
                 <div className="skillset">
                     <quote className="skillset-quote">These are some of the skills I have accumulated throughout the years.</quote>
                     <div className="skillset-images">
@@ -37,7 +37,7 @@ export default function Home(){
 
                     </div>
                 </div>
-            
+                </section>
             
 
             <h1>Etc</h1>
