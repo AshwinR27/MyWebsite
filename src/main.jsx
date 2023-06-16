@@ -9,6 +9,9 @@ import Certificates from './Components/certificates/Certificates'
 import Home from './Components/Home'
 import {loader as certificatesLoader} from './Components/certificates/Certificates'
 
+import Resume from './Components/resume/Resume'
+// import {loader as resumeLoader} from './Components/resume/Resume'
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,11 +27,16 @@ const router = createBrowserRouter([
         element: <Certificates />,
         loader: certificatesLoader
         
+      },
+      {
+        path:"resume",
+        element:<Resume />,
+        // loader: resumeLoader
       }
     ]
   }
 ])
-
+gi
 function App(){
   return(<RouterProvider router={router} />)
 }
