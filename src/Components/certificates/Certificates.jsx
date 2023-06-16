@@ -60,29 +60,28 @@ export default function Certificates(){
                 <div className="actual-filter-buttons">
                 <button
                 onClick={() => handleFilterChange("year","2020")}
-                className={`year-2020 
-                ${yearFilter === '2020'? "selected": ""}`} >
+                className={`${yearFilter === '2020'? "selected": ""} button-transition`} >
                     2020
                 </button>
                 <button
                 onClick={() => handleFilterChange("year","2021")}
-                className={yearFilter === '2021'? "selected": ""} >
+                className={`${yearFilter === '2021'? "selected": ""} button-transition`} >
                     2021
                 </button>
                 <button
                 onClick={() => handleFilterChange("year","2022")}
-                className={yearFilter === '2022'? "selected": ""}>
+                className={`${yearFilter === '2022'? "selected": ""} button-transition`}>
                     2022
                 </button>
                 <button
                 onClick={() => handleFilterChange("year","2023")}
-                className={yearFilter === '2023'? "selected": ""} >
+                className={`${yearFilter === '2023'? "selected": ""} button-transition`} >
                     2023
                 </button>
                 
                 {yearFilter && <button
                 onClick={() => handleFilterChange("year",null)}
-                className="year-clear" >
+                className="year-clear button-transition" >
                     Clear filter
                 </button>}
                 </div>

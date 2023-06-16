@@ -20,8 +20,9 @@ html,body{
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     min-height: 100vh;
+    justify-content: space-around;
 }
 
 .nav-header{
@@ -38,7 +39,7 @@ html,body{
     background-color: #F4F4F9 ;
     box-shadow: 2px 2px 10px 3px #D9D9F4 ;
     user-select: none;
-    height: 110px;
+    height: 95px;
     
     
 }
@@ -49,9 +50,9 @@ html,body{
     gap: 50px;
     font-weight: 600;
     padding: 0 5rem;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     
- 
+   
 }
 
 a{
@@ -68,14 +69,17 @@ a{
 }
 
 .nav-active{
-    font-size: large;
-    font-weight: 900;
-    text-decoration: underline;
-   
+    /* font-size: large; */
+    /* font-weight: 900; */
+    background-color: #563572;
+    border-radius: 1.5rem;
+    color: white;
+   padding: 0.4rem 0.8rem;
 }
 
 .nav-inactive{
     color: #551a8e;
+    transition: all 0.5ms ease ;
 }
 
 
@@ -87,28 +91,32 @@ a{
 
 
 .nav-header-elements .nav-inactive:hover{
-    font-size: larger;
+    cursor: pointer;
+    transform: translateY(.2rem);
     font-weight: bolder;
-    text-decoration: underline;
-    color: #000;
+    /* text-decoration: underline; */
+    color: #551a8e;
 }
 
 
 
 footer{
-    height: 150px;
+    height: 100px;
     display: flex;
    justify-content: center;
    align-items: center;
     background-color: #d9cbe8;
     margin-top: auto;
     flex-direction: row;
+
 }
 
 footer img{
     width: 40px;
     margin: auto 5rem;
     cursor: pointer;
+
+    transition: all 3ms ease;
 }
 
 footer img:hover{
@@ -139,7 +147,7 @@ footer img:hover{
     padding-right: 5rem;
 }
 
-quote{
+.intro h1{
   
     font-weight: bolder;
     font-size: 5rem;
@@ -154,7 +162,7 @@ quote{
 }
 
 .skillset{
-    background-color: #551a8e;
+    background-color: #6a2ca4;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -219,14 +227,21 @@ quote{
 /* end of media queries  */
 
 .skillset-quote{
-    padding: 3rem;
+    /* padding: 3rem; */
     color: white;
     text-align: center;
+
+    font-weight: bolder;
+    font-size: 5rem;
+    line-height: 60px;
+    font-family: "Caveat"
 
 }
 
 .skillset-logo img{
     width: 100px;
+    height: 100px;
+    object-fit: contain;
    
 }
 
@@ -274,6 +289,12 @@ quote{
     text-align: right;
 }
 
+.button-transition{
+    transition: all 0.3ms ease-in;
+}
+.button-transition:hover{
+    transform: translateY(-0.5rem);
+}
 
 
 .filter-year-buttons button{
@@ -288,6 +309,8 @@ quote{
     align-self: center;
     font-size: medium;
     cursor: pointer;
+
+  
 }
 .filter-year-buttons h1{
     font-family: "Caveat";
@@ -300,13 +323,9 @@ quote{
 .filter-year-buttons button:hover{
     background-color: #563572;
 
-}
-
-.filter-year-buttons .selected:hover{
-    background-color: #562d7a;
-
    
 }
+
 
 .filter-year-buttons .selected{
     background-color: #562d7a;
@@ -337,6 +356,7 @@ quote{
     color: white;
     font-size: large;
     cursor: pointer;
+    border-radius: 1.5rem;
 }
 
 .resume-container button:hover{
@@ -348,13 +368,13 @@ quote{
     color: #562d7a;
     font-size: large;
     text-align: center;
+    
 }
 
 .resume-container embed{
    
     box-shadow: 1rem 1rem 7rem 0rem #551a8e;
 }
-
 
 
 

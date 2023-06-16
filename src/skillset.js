@@ -32,12 +32,32 @@ export default [{
     name:"React"
 },
 {   id:8,
-    imageURL:"skillset/flask.png",
-    name:"Flask"
+    imageURL:"skillset/react-router.png",
+    name:"React Router 6"
 },
-{   id:9,
-    imageURL:"skillset/db.png",
-    name:"SQL/NoSQL"
+// {   id:9,
+//     imageURL:"skillset/db.png",
+//     name:"SQL/NoSQL"
+// },
+// {   id:9,
+//     imageURL:"skillset/oracledb.png",
+//     name:"OracleDB"
+// },
+{   id:11,
+    imageURL:"skillset/sqlitedb.png",
+    name:"SQLite"
 },
+{   id:12,
+    imageURL:"skillset/mongodb.png",
+    name:"MongoDB"
+},
+{   id:13,
+    imageURL:"skillset/php.png",
+    name:"PHP"
+},
+{   id:14,
+    imageURL:"skillset/firebase.png",
+    name:"Firebase"
+}
 
 ]
