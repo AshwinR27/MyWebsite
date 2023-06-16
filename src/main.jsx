@@ -10,7 +10,7 @@ import Home from './Components/Home'
 import {loader as certificatesLoader} from './Components/certificates/Certificates'
 
 import Resume from './Components/resume/Resume'
-// import {loader as resumeLoader} from './Components/resume/Resume'
+
 
 const router = createBrowserRouter([
   {
@@ -27,11 +27,6 @@ const router = createBrowserRouter([
         element: <Certificates />,
         loader: certificatesLoader
         
-      },
-      {
-        path:"resume",
-        element:<Resume />,
-        // loader: resumeLoader
       }
     ]
   }
