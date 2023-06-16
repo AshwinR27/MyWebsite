@@ -313,3 +313,47 @@ quote{
    
 }
 
+
+/* iframe{
+    width: 40rem;
+    height: 55rem;
+    
+    border: none;
+} */
+
+.resume-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    padding: 5rem;
+}
+
+.resume-container button{
+    padding: 2rem 10rem;
+    background-color: #6a2ba6;
+    font-family: "Inter",sans-serif;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+}
+
+.resume-container button:hover{
+    background-color: #310b55;
+}
+
+.resume-download{
+    font-family: "Caveat",sans-serif;
+    color: #562d7a;
+    font-size: large;
+    text-align: center;
+}
+
+.resume-container embed{
+   
+    box-shadow: 1rem 1rem 7rem 0rem #551a8e;
+}
+
+
+
+
