@@ -13,12 +13,14 @@ html,body{
     background-color: #F0F0F7;
     user-select: none;
     font-size: 62.5%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .site-wrapper{
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    flex-wrap: nowrap;
     min-height: 100vh;
 }
 
@@ -26,6 +28,7 @@ html,body{
     min-width: 100%;
     position: sticky;
     top: 0;
+  
     
     
     display: flex;
@@ -43,10 +46,11 @@ html,body{
 .nav-header-elements{
     display: flex;
     align-items: center;
-    gap: 45px;
+    gap: 50px;
     font-weight: 600;
-    padding: 0 10rem;
+    padding: 0 5rem;
     font-size: 1.6rem;
+    
  
 }
 
@@ -57,8 +61,9 @@ a{
 
 .nav-header img{
     min-width: 5rem;
-    width: 15rem;
+    width: 12rem;
     margin-right: auto;
+    
    
 }
 
@@ -66,8 +71,12 @@ a{
     font-size: large;
     font-weight: 900;
     text-decoration: underline;
+   
 }
 
+.nav-inactive{
+    color: #551a8e;
+}
 
 
 .nav-header a:active{
@@ -157,17 +166,51 @@ quote{
     gap: 1rem;   
 }
 
+/* media queries  */
 
-@media (min-width: 600px) {
+@media screen and (max-width:900px) {
     .skillset-images { grid-template-columns: repeat(2, 1fr); }
-  }
+    .actual-filter-buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        display: grid;
+        place-items: center;
+        align-content: center;
+    }
+
+    
+}
+
+
   
  
-  @media (min-width: 900px) {
+  @media screen and (min-width: 901px) {
     .skillset-images { grid-template-columns: repeat(4, 1fr); }
-  }
+    
+    .certificates-container { grid-template-columns: repeat(2, 1fr); }
+    
+    .actual-filter-buttons{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: center;
+        
+  
+    }
+    
+}
 
-
+   
+/* end of media queries  */
+/* section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+   
+} */
 .skillset-quote{
     padding: 3rem;
     color: white;
@@ -193,4 +236,74 @@ quote{
 .skillset-logo:hover .tooltip{
     visibility: visible;
 }
+
+.certificates-container{
+    display: grid;
+    gap: 5rem;
+    padding: 10rem;
+    
+}
+
+.certificates-container h1,h2,h3{
+    color: white    ;
+   font-size: large;
+   
+}
+
+.certificates-container figure{
+    text-align: center;
+    background-color: #551a8e;
+    padding: 3rem;
+    border-radius: 2rem;
+    margin-trim: block;
+}
+
+.certificates-container h2{
+    font-style: italic;
+}
+
+.certificates-container h3{
+    text-align: right;
+}
+
+
+
+.filter-year-buttons button{
+    padding: 1rem 3rem; 
+    margin: .5rem;
+    border: none;
+    font-family: "Inter",sans-serif;
+    background-color: #af87cf;
+    color: aliceblue;
+    border-radius: 1.5rem;
+    width: 15rem;
+    align-self: center;
+    font-size: medium;
+}
+.filter-year-buttons h1{
+    font-family: "Caveat";
+    color: #562d7a;
+    margin-top: 5rem;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.filter-year-buttons button:hover{
+    background-color: #563572;
+
+}
+
+.filter-year-buttons .selected:hover{
+    background-color: #562d7a;
+
+   
+}
+
+.filter-year-buttons .selected{
+    background-color: #562d7a;
+    color: white;
+   
+}
+
+
 

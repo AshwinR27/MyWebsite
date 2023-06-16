@@ -7,6 +7,7 @@ import {
 import Layout from './Components/Layout'
 import Certificates from './Components/certificates/Certificates'
 import Home from './Components/Home'
+import {loader as certificatesLoader} from './Components/certificates/Certificates'
 
 const router = createBrowserRouter([
   {
@@ -15,12 +16,14 @@ const router = createBrowserRouter([
     children:[
       {
         path:"",
-        element:<Home />
+        element:<Home />,
 
       },
       {
         path:"certificates",
-        element: <Certificates />
+        element: <Certificates />,
+        loader: certificatesLoader
+        
       }
     ]
   }
@@ -32,7 +35,7 @@ function App(){
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+
     <App />
-  </React.StrictMode>,
+
 )
