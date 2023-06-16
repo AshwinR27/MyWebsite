@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
     useSearchParams,
     useLoaderData
@@ -9,6 +10,7 @@ export async function loader(){
     const certificates = await getCertificates()
     return certificates
 }
+
 
 export default function Certificates(){
     const certificatesArr = useLoaderData()
