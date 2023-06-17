@@ -82,7 +82,7 @@ a{
     /* background-color: var(--accent); */
     /* text-decoration: underline; */
     border: none;
-    box-shadow: 0px 1px 15px 0px var(--accent);
+    /* box-shadow: 0px 1px 15px 0px var(--accent); */
     border-radius: 0.5rem;
     color: var(--accent);
    padding: 0.4rem 0.8rem;
