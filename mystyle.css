@@ -1,3 +1,11 @@
+:root{
+    --text: #000000;
+    --background: #e8e7fe;
+    --primary-button: #2e20f3;
+    --secondary-button: #cdcafc;
+    --accent: #1b0ced;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -10,7 +18,7 @@ img{
 html,body{
     font-family: "Inter",sans-serif;
     margin: 0;
-    background-color: #F0F0F7;
+    background-color: var(--background);
     user-select: none;
     font-size: 62.5%;
     /* overflow-x: hidden; */
@@ -36,8 +44,8 @@ html,body{
     align-items: center;
     justify-content: space-between;
    
-    background-color: #F4F4F9 ;
-    box-shadow: 2px 2px 10px 3px #D9D9F4 ;
+    background-color: var(--background) ;
+    box-shadow: 2px 2px 10px 3px var(--secondary-button);
     user-select: none;
     height: 95px;
     
@@ -71,14 +79,14 @@ a{
 .nav-active{
     /* font-size: large; */
     /* font-weight: 900; */
-    background-color: #563572;
-    border-radius: 1.5rem;
+    background-color: var(--accent);
+    border-radius: 0.5rem;
     color: white;
    padding: 0.4rem 0.8rem;
 }
 
 .nav-inactive{
-    color: #551a8e;
+    color: var(--text);
     transition: all 0.5ms ease ;
 }
 
@@ -86,7 +94,7 @@ a{
 .nav-header a:active{
    
     text-decoration: none;
-    color: #551a8e;
+    color: var(--text);
 }
 
 
@@ -95,7 +103,8 @@ a{
     transform: translateY(.2rem);
     font-weight: bolder;
     /* text-decoration: underline; */
-    color: #551a8e;
+    color: var(--accent);
+
 }
 
 
@@ -105,7 +114,7 @@ footer{
     display: flex;
    justify-content: center;
    align-items: center;
-    background-color: #d9cbe8;
+    background-color: var(--secondary-button);
     margin-top: auto;
     flex-direction: row;
 
@@ -152,7 +161,7 @@ footer img:hover{
     font-weight: bolder;
     font-size: 5rem;
     line-height: 60px;
-    color: #562d7a;
+    color: var(--text);
     font-family: "Caveat";
 
 }
@@ -162,7 +171,7 @@ footer img:hover{
 }
 
 .skillset{
-    background-color: #6a2ca4;
+    background-color: var(--secondary-button);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -228,7 +237,7 @@ footer img:hover{
 
 .skillset-quote{
     /* padding: 3rem; */
-    color: white;
+    color: var(--text);
     text-align: center;
 
     font-weight: bolder;
@@ -252,7 +261,7 @@ footer img:hover{
     text-align: center;
     padding: .5rem;
     visibility: hidden;
-    color: white;
+    color: var(--accent);
     
 }
 
@@ -268,14 +277,14 @@ footer img:hover{
 }
 
 .certificates-container h1,h2,h3{
-    color: white    ;
+    color: var(--text)    ;
    font-size: large;
    
 }
 
 .certificates-container figure{
     text-align: center;
-    background-color: #551a8e;
+    background-color: var(--secondary-button);
     padding: 3rem;
     border-radius: 2rem;
     margin-trim: block;
@@ -302,9 +311,9 @@ footer img:hover{
     margin: .5rem;
     border: none;
     font-family: "Inter",sans-serif;
-    background-color: #af87cf;
+    background-color: var(--primary-button);
     color: aliceblue;
-    border-radius: 1.5rem;
+    border-radius: 0.5rem;
     width: 15rem;
     align-self: center;
     font-size: medium;
@@ -314,26 +323,29 @@ footer img:hover{
 }
 .filter-year-buttons h1{
     font-family: "Caveat";
-    color: #562d7a;
+    color: var(--text);
     margin-top: 5rem;
     font-size: xx-large;
     text-align: center;
 }
 
 .filter-year-buttons button:hover{
-    background-color: #563572;
+    box-shadow: 0px 4px 150px 5px var(--accent);
 
    
 }
 
 
 .filter-year-buttons .selected{
-    background-color: #562d7a;
+    background-color: #251d91;
     color: white;
    
 }
 
-
+.year-clear{
+    background-color: var(--secondary-button);
+    
+}
 /* iframe{
     width: 40rem;
     height: 55rem;
@@ -351,21 +363,22 @@ footer img:hover{
 
 .resume-container button{
     padding: 2rem 10rem;
-    background-color: #6a2ba6;
+    background-color: var(--primary-button);
     font-family: "Inter",sans-serif;
     color: white;
     font-size: large;
     cursor: pointer;
-    border-radius: 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
 }
 
 .resume-container button:hover{
-    background-color: #310b55;
+    box-shadow: 0px 4px 150px 5px var(--accent);
 }
 
 .resume-download{
     font-family: "Caveat",sans-serif;
-    color: #562d7a;
+    color: var(--text);
     font-size: large;
     text-align: center;
     
@@ -373,7 +386,7 @@ footer img:hover{
 
 .resume-container embed{
    
-    box-shadow: 1rem 1rem 7rem 0rem #551a8e;
+    box-shadow: 1rem 1rem 7rem 0rem var(--accent);
 }
 
 
