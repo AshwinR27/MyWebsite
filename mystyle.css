@@ -71,27 +71,21 @@ a{
 .nav-header img{
     min-width: 5rem;
     width: 10rem;
-    margin-right: auto;
+    /* margin-right: auto; */
     margin-left: 1rem;
     
    
 }
 
 .nav-active{
-    /* font-size: large; */
-    font-weight: 900;
-    /* background-color: var(--accent); */
-    /* text-decoration: underline; */
     border: none;
-    /* box-shadow: 0px 1px 15px 0px var(--accent); */
     border-radius: 0.5rem;
     color: var(--accent);
-   padding: 0.4rem 0.8rem;
 }
 
 .nav-inactive{
     color: var(--text);
-    transition: all 100ms ease ;
+    transition: all 200ms ease ;
 }
 
 
@@ -104,10 +98,7 @@ a{
 
 .nav-header-elements .nav-inactive:hover{
     cursor: pointer;
-    transform: translateY(-.2rem);
-    font-weight: bolder;
-    /* text-decoration: underline; */
-    /* color: var(--accent); */
+    transform: translateY(-.4rem);
 
 }
 
@@ -245,7 +236,6 @@ footer img:hover{
 /* end of media queries  */
 
 .skillset-quote{
-    /* padding: 3rem; */
     color: var(--text);
     text-align: center;
 
