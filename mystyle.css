@@ -178,7 +178,7 @@ footer img:hover{
 }
 
 .skillset{
-    background-color: var(--secondary-button);
+    background-color:  var(--secondary-button);
     display: flex;
     flex-direction: column;
     align-items: center;
