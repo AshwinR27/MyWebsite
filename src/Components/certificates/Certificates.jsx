@@ -56,7 +56,7 @@ export default function Certificates(){
         <section>
         
             <div className="filter-year-buttons">
-                <h1>Filter My Certificates by year</h1>
+                <h1>Filter My <span className="cool-color-change">Certificates</span> by year</h1>
                 <div className="actual-filter-buttons">
                 <button
                 onClick={() => handleFilterChange("year","2020")}
