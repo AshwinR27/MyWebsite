@@ -4,6 +4,7 @@
     --primary-button: #2e20f3;
     --secondary-button: #cdcafc;
     --accent: #1b0ced;
+    --background2: #dcdbf1;
 }
 
 *{
@@ -21,7 +22,7 @@ html,body{
     background-color: var(--background);
     user-select: none;
     font-size: 62.5%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 .site-wrapper{
@@ -175,6 +176,7 @@ footer img:hover{
     flex-direction: column;
     align-items: center;
     border-radius: 0.5rem;
+    margin-bottom: 5rem;
     
 }
 
@@ -359,6 +361,7 @@ footer img:hover{
     text-decoration: underline;
     font-family: "Inter",sans-serif;
     font-size: medium;
+    cursor: pointer;
     
 }
 

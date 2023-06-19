@@ -43,7 +43,7 @@ export default function Home(){
                 
             
 
-            <h1>Etc</h1>
+            {/* <h1>Etc</h1> */}
         </div>
     )
 }
