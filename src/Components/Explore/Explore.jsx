@@ -5,7 +5,7 @@ import { useLoaderData } from 'react-router-dom';
 
 
 
-function Explore() {
+export default function Explore() {
     const educationArr = useLoaderData()
 
     const [explore, setExplore] = React.useState(false)
@@ -39,4 +39,3 @@ function Explore() {
      );
 }
 
-export default Explore;
