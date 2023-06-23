@@ -1,8 +1,13 @@
 import React from "react";
 import data from "../skillset";
+import { Outlet, Link } from "react-router-dom";
 
 export default function Home(){
+    const [explore, setExplore] = React.useState(false)
 
+    const toggleExplore = () => {
+        setExplore(prevExplore => !prevExplore)
+    }
    
     const mappedSkills = data.map(skill => {
         return(
@@ -15,9 +20,10 @@ export default function Home(){
         
     )
 
+    React.useEffect
 
     return(
-        <div className="home-container">
+        <main>
            <section>
                 <div className="intro">
                     <img src="home/ProfileImage.png" />
@@ -29,7 +35,7 @@ export default function Home(){
             
                 </section>
                 <section>
-                    <div className="skillset">
+                    <div className="skillset full-bleed">
                         
                             <h1 className="skillset-quote">These are some of the <span className="cool-color-change">Skills</span> I have accumulated throughout the years.</h1>
                             <div className="skillset-images">
@@ -39,11 +45,26 @@ export default function Home(){
                             </div>
                         
                     </div>
-                </section>
+            </section>
                 
+            {explore ? 
+                <div className="exploration">
+                    <Link to=".">
+                        <button className="explore-btn  button-transition" onClick={toggleExplore}>Hide &#11165;</button>
+                    </Link>
+                    <Outlet />
+            </div>
             
+            :
+            
+            <div className="exploration">
+                <Link to="/explore">
+                    <button className="explore-btn  button-transition" onClick={toggleExplore}>Explore more &#11167;</button>
+                </Link>
 
-            {/* <h1>Etc</h1> */}
-        </div>
+               
+            </div>}
+            
+        </main>
     )
 }

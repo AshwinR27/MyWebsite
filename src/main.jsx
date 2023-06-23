@@ -12,6 +12,9 @@ import {loader as certificatesLoader} from './Components/certificates/Certificat
 import Resume from './Components/resume/Resume'
 // import {loader as resumeLoader} from './Components/resume/Resume'
 
+import Explore from './Components/explore/Explore'
+import {loader as educationLoader} from './Components/explore/Explore'
+
 
 const router = createBrowserRouter([
   {
@@ -21,7 +24,13 @@ const router = createBrowserRouter([
       {
         path:"",
         element:<Home />,
-
+        children:[
+        {
+          path:"explore",
+          element:<Explore />,
+          loader: educationLoader
+        }
+      ]
       },
       {
         path:"certificates",
