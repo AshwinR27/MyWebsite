@@ -1,7 +1,7 @@
 import React from "react";
 import data from "../skillset";
 import { Outlet, Link } from "react-router-dom";
-import Explore from "./Explore/Explore";
+import Explore from "./explore/Explore";
 import {getEducation} from "../firebase"
 
 export async function loader(){
