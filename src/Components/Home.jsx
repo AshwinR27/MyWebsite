@@ -1,5 +1,14 @@
 import React from "react";
 import data from "../skillset";
+import { Outlet, Link } from "react-router-dom";
+import Explore from "./explore/Explore";
+import {getEducation} from "../firebase"
+
+export async function loader(){
+    const education = await getEducation()
+    return education
+}
+
 
 export default function Home(){
 
@@ -15,9 +24,10 @@ export default function Home(){
         
     )
 
+    React.useEffect
 
     return(
-        <div className="home-container">
+        <main>
            <section>
                 <div className="intro">
                     <img src="home/ProfileImage.png" />
@@ -29,7 +39,7 @@ export default function Home(){
             
                 </section>
                 <section>
-                    <div className="skillset">
+                    <div className="skillset full-bleed">
                         
                             <h1 className="skillset-quote">These are some of the <span className="cool-color-change">Skills</span> I have accumulated throughout the years.</h1>
                             <div className="skillset-images">
@@ -37,13 +47,14 @@ export default function Home(){
                                 {mappedSkills}
 
                             </div>
-                        
+                      
                     </div>
-                </section>
+            </section>
                 
+            <Explore />
             
-
-            {/* <h1>Etc</h1> */}
-        </div>
+        </main>
     )
 }
+
+

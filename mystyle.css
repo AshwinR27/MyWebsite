@@ -79,7 +79,6 @@ a{
 }
 
 .nav-active{
-    border: none;
     border-radius: 0.5rem;
     color: var(--accent);
 }
@@ -129,7 +128,7 @@ footer img:hover{
    
 }
 
-.home-container{
+main{
     display: flex;
     flex-direction: column;
 }
@@ -170,6 +169,11 @@ footer img:hover{
     
 }
 
+.full-bleed{
+    box-shadow: 0 0 0 100vmax var(--secondary-button);
+    clip-path: inset(0 -100vmax);
+}
+
 .skillset{
     background-color:  var(--secondary-button);
     display: flex;
@@ -207,6 +211,15 @@ footer img:hover{
         padding: 5rem;
     }
     
+    .education-container{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+
+    .explore-btn{
+        margin-bottom: 5rem;
+    }
 }
 
 
@@ -332,7 +345,7 @@ footer img:hover{
 }
 
 .rest:hover{
-    box-shadow: 0px 30px 150px 2px var(--accent);
+    box-shadow: 0px 30px 200px 5px var(--accent);
 
    
 }
@@ -395,7 +408,7 @@ footer img:hover{
 }
 
 .resume-container button:hover{
-    box-shadow: 0px 4px 150px 5px var(--accent);
+    box-shadow: 0px 4px 300px 5px var(--accent);
 }
 
 .resume-download{
@@ -411,5 +424,59 @@ footer img:hover{
     box-shadow: 1rem 1rem 7rem 0rem var(--accent);
 }
 
+.exploration{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;   
+    gap:5rem; 
+}
 
+.explore-btn{
+    font-family: 'Inter',sans-serif;
+    padding: 2rem 5rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--secondary-button);
+    color: var(--text);
+   
+}
 
+.education-container{
+    
+    display: flex;
+    /* flex-direction: row; */
+    gap: 5rem;
+
+   
+}
+
+.education-details{
+    background-color: var(--background2);
+    width: 90ch;
+    border-radius: 0.5rem;
+    padding: 5rem;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.education-container h1{
+    font-weight: 600;
+}
+
+.education-container h2,h3,h4{
+    font-weight: 400;
+}
+
+.education-container h1,h2,h3,h4{
+    font-size: large;
+    color: var(--text);
+}
+
+.education-details h2,h4{
+    color: var(--primary-button);
+}
+
+.education-details h4{
+    align-self: flex-end;
+}

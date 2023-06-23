@@ -23,10 +23,21 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 
-const certificatesCollectionRef = collection(db, "certificates")
+
 
 export default async function getCertificates(){
+  const certificatesCollectionRef = collection(db, "certificates")
   const querySnapshot = await getDocs(certificatesCollectionRef)
+  const mappedArr = querySnapshot.docs.map(doc => ({
+    ...doc.data(),
+    id: doc.id
+  }))
+  return mappedArr
+}
+
+export async function getEducation(){
+  const educationCollectionRef = collection(db, "education")
+  const querySnapshot = await getDocs(educationCollectionRef)
   const mappedArr = querySnapshot.docs.map(doc => ({
     ...doc.data(),
     id: doc.id
