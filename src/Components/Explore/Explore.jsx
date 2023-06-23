@@ -1,16 +1,18 @@
 import React from 'react';
-import {getEducation} from "../../firebase"
+
 import { useLoaderData } from 'react-router-dom';
 
 
-export async function loader(){
-    const education = await getEducation()
-    return education
-}
 
 
 function Explore() {
     const educationArr = useLoaderData()
+
+    const [explore, setExplore] = React.useState(false)
+
+    const toggleExplore = () => {
+        setExplore(prevExplore => !prevExplore)
+    }
 
     const mappedEducationData = educationArr.map(data => (
        
@@ -24,11 +26,16 @@ function Explore() {
     ))
 
     return ( 
-        <section>
-            <div className='education-container' >
-                {mappedEducationData}
-            </div>
-        </section>
+
+        <div className="exploration">
+            <button className="explore-btn  button-transition" onClick={toggleExplore}>
+                {explore?   <span>Hide &#11165;</span>:<span>Explore more &#11167;</span>}
+            </button> 
+        
+                <div className='education-container' >
+                    {explore? mappedEducationData:""}
+        </div>
+        </div>
      );
 }
 

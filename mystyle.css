@@ -428,7 +428,8 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5rem;
+    margin-bottom: 5rem;   
+    gap:5rem; 
 }
 
 .explore-btn{

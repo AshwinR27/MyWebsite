@@ -1,13 +1,17 @@
 import React from "react";
 import data from "../skillset";
 import { Outlet, Link } from "react-router-dom";
+import Explore from "./explore/Explore";
+import {getEducation} from "../firebase"
+
+export async function loader(){
+    const education = await getEducation()
+    return education
+}
+
 
 export default function Home(){
-    const [explore, setExplore] = React.useState(false)
 
-    const toggleExplore = () => {
-        setExplore(prevExplore => !prevExplore)
-    }
    
     const mappedSkills = data.map(skill => {
         return(
@@ -43,28 +47,14 @@ export default function Home(){
                                 {mappedSkills}
 
                             </div>
-                        
+                      
                     </div>
             </section>
                 
-            {explore ? 
-                <div className="exploration">
-                    <Link to=".">
-                        <button className="explore-btn  button-transition" onClick={toggleExplore}>Hide &#11165;</button>
-                    </Link>
-                    <Outlet />
-            </div>
-            
-            :
-            
-            <div className="exploration">
-                <Link to="/explore">
-                    <button className="explore-btn  button-transition" onClick={toggleExplore}>Explore more &#11167;</button>
-                </Link>
-
-               
-            </div>}
+            <Explore />
             
         </main>
     )
 }
+
+
