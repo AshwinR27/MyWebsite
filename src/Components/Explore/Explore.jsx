@@ -31,11 +31,11 @@ function Explore() {
             <button className="explore-btn  button-transition" onClick={toggleExplore}>
                 {explore?   <span>Hide &#11165;</span>:<span>Explore more &#11167;</span>}
             </button> 
-        
-                <div className='education-container' >
-                    {explore? mappedEducationData:""}
-        </div>
-        </div>
+       
+            <div className='education-container' >
+                {explore? mappedEducationData:""}
+            </div>
+       </div>
      );
 }
 
