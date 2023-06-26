@@ -44,3 +44,13 @@ export async function getEducation(){
   }))
   return mappedArr
 }
+
+export async function getProjects(){
+  const projectsCollectionRef = collection(db, "projects")
+  const querySnapshot = await getDocs(projectsCollectionRef)
+  const mappedArr = querySnapshot.docs.map(doc => ({
+    ...doc.data(),
+    id: doc.id
+  }))
+  return mappedArr
+}

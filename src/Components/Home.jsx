@@ -3,6 +3,7 @@ import data from "../skillset";
 import { Outlet, Link } from "react-router-dom";
 import Explore from "./explore/Explore";
 import {getEducation} from "../firebase"
+import Projects from "./projects/Projects";
 
 export async function loader(){
     const education = await getEducation()
@@ -52,7 +53,7 @@ export default function Home(){
             </section>
                 
             <Explore />
-            
+            <Projects />
         </main>
     )
 }
