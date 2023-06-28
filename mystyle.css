@@ -157,7 +157,7 @@ main{
 
 
 .quote{
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 5rem;
     line-height: 60px;
     color: var(--text);
