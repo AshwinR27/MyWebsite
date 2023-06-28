@@ -2,12 +2,13 @@ import React from "react";
 import data from "../skillset";
 import { Outlet, Link } from "react-router-dom";
 import Explore from "./explore/Explore";
-import {getEducation} from "../firebase"
+import {getEducation, getProjects} from "../firebase"
 import Projects from "./projects/Projects";
 
 export async function loader(){
     const education = await getEducation()
-    return education
+    const project = await getProjects()
+    return [education, project]
 }
 
 
@@ -32,7 +33,7 @@ export default function Home(){
            <section>
                 <div className="intro">
                     <img src="home/ProfileImage.png" />
-                    <h1 className="intro-quote">Hey there! I'm <span className="cool-color-change">Ashwin</span>, a passionate <span className="cool-color-change">CS Engineer</span> constantly 
+                    <h1 className="intro-quote quote">Hey there! I'm <span className="cool-color-change">Ashwin</span>, a passionate <span className="cool-color-change">CS Engineer</span> constantly 
                         seeking out exciting opportunities 
                         to expand my skillset and put 
                         them into action.</h1>
@@ -42,7 +43,7 @@ export default function Home(){
                 <section>
                     <div className="skillset full-bleed">
                         
-                            <h1 className="skillset-quote">These are some of the <span className="cool-color-change">Skills</span> I have accumulated throughout the years.</h1>
+                            <h1 className="skillset-quote quote">These are some of the <span className="cool-color-change">Skills</span> I have accumulated throughout the years.</h1>
                             <div className="skillset-images">
                             
                                 {mappedSkills}
@@ -51,9 +52,13 @@ export default function Home(){
                       
                     </div>
             </section>
-                
+            
+            <section>
+                <Projects />    
+            </section>
+            
             <Explore />
-            <Projects />
+            
         </main>
     )
 }

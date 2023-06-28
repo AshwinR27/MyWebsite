@@ -155,15 +155,15 @@ main{
     padding-right: 5rem;
 }
 
-.intro h1{
-  
+
+.quote{
     font-weight: bolder;
     font-size: 5rem;
     line-height: 60px;
     color: var(--text);
     font-family: "Caveat";
-
 }
+
 .intro-quote{
     width: 40ch;
     
@@ -191,7 +191,7 @@ main{
 
 /* media queries  */
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:600px) {
     .skillset-images { grid-template-columns: repeat(2, 1fr); }
     .actual-filter-buttons{
         display: flex;
@@ -219,13 +219,41 @@ main{
 
     .explore-btn{
         margin-bottom: 5rem;
+        margin-top: 5rem;
     }
+    /*  */
+    .project-details{
+        /* margin: 7rem!important; */
+        font-size: x-large;
+        display: flex;
+        flex-direction: column!important;
+        align-items: center;
+        line-height: 3rem;
+        width: 30rem;
+        background-color: var(--secondary-button);
+        border-radius: 0.5rem;
+        border: var(--accent) 0.5px solid;
+        gap:2rem;
+    
+    }
+    
+    .tech-stack{
+        display: flex;
+        flex-direction: column;
+        max-width: 20rem;
+    } 
+ 
+    .project-desc-details{
+        width: 15ch!important;
+        text-align: center;
+    } 
+    
 }
 
 
   
  
-  @media screen and (min-width: 901px) {
+  @media screen and (min-width: 601px) {
     .skillset-images { grid-template-columns: repeat(4, 1fr); }
     
     .certificates-container { grid-template-columns: repeat(2, 1fr); }
@@ -439,7 +467,7 @@ main{
     border: none;
     background-color: var(--secondary-button);
     color: var(--text);
-   
+   margin-top: 5rem;
 }
 
 .education-container{
@@ -458,6 +486,7 @@ main{
     padding: 5rem;
     line-height: 3rem;
     text-align: center;
+    height: 37rem;
 }
 
 .education-container h1{
@@ -479,4 +508,56 @@ main{
 
 .education-details h4{
     align-self: flex-end;
+}
+
+.projects-quote{
+    text-align: center;
+    margin-top: 15rem;
+
+}
+.project-details{
+    margin: 5rem;
+    font-size: x-large;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    line-height: 3rem;
+    width: auto;
+    background-color: var(--secondary-button);
+    padding: 10rem;
+    border-radius: 0.5rem;
+    border: var(--accent) 0.5px solid;
+
+}
+.project-title{
+    width: 15ch;
+    align-self: center;
+    font-weight: bold;
+    color: var(--accent);
+
+}
+
+.project-desc{
+    display: flex;
+    flex-direction: column;
+    width: 40ch;
+    align-items: center;
+}
+
+.tech-stack{
+    display: flex;
+    gap: 0.5rem;
+
+}
+.tech-stack-element{
+    margin-top: 3rem;
+    padding: 0.5rem 2rem;
+    border: var(--accent) 0.1rem solid;
+    border-radius: 2rem;
+    font-size: small;
+
+}
+
+.project-desc-details{
+    width: 35ch;
 }
