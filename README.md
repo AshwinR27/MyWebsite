@@ -1,3 +1,3 @@
 # MyWebsite
 -This is just meant to be a basic React website about my profile
-https://ashwinrwebsite.netlify.app/ 
+- View the website here : https://ashwinrwebsite.netlify.app/ 
