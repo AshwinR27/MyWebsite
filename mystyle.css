@@ -56,9 +56,9 @@ html,body{
 .nav-header-elements{
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
     font-weight: 600;
-    padding: 0 5rem;
+    padding: 0 3rem;
     font-size: 1.7rem;
     
    
@@ -150,14 +150,13 @@ main{
 }
 .intro img{
     height: auto;
-    min-width: 20rem;
     width: 25rem;
-    padding-right: 5rem;
+    padding-right: 3rem;
 }
 
 
 .quote{
-    font-weight: bold;
+    font-weight: 400;
     font-size: 5rem;
     line-height: 60px;
     color: var(--text);
@@ -192,6 +191,19 @@ main{
 /* media queries  */
 
 @media screen and (max-width:600px) {
+    
+    .intro{
+        display: grid;
+        grid-template: 1fr 1fr / 1fr;
+        place-items: center;
+
+    }
+    .quote{
+        margin-top: -5rem;
+        width: 17ch;
+        text-align: center;
+        
+    }
     .skillset-images { grid-template-columns: repeat(2, 1fr); }
     .actual-filter-buttons{
         display: flex;
@@ -239,14 +251,27 @@ main{
     
     .tech-stack{
         display: flex;
-        flex-direction: column;
-        max-width: 20rem;
+        flex-direction: row;
+        flex-wrap: wrap!important;
+       
+        justify-content: center;
+        width: 25rem;
     } 
- 
+
     .project-desc-details{
         width: 15ch!important;
         text-align: center;
     } 
+    .certificates-container{
+        display: flex!important;
+        flex-direction: column;
+        gap: 2rem;
+
+        display: grid;
+        place-items: center;
+        align-content: center;
+    }
+
     
 }
 
@@ -283,7 +308,6 @@ main{
     text-align: center;
 
     max-width: 48ch;
-    font-weight: bolder;
     font-size: 5rem;
     line-height: 60px;
     font-family: "Caveat"
@@ -487,6 +511,7 @@ main{
     line-height: 3rem;
     text-align: center;
     height: 37rem;
+    margin-bottom: 5rem;
 }
 
 .education-container h1{
@@ -524,13 +549,14 @@ main{
     line-height: 3rem;
     width: auto;
     background-color: var(--secondary-button);
-    padding: 10rem;
+    padding: 8rem;
     border-radius: 0.5rem;
     border: var(--accent) 0.5px solid;
+    gap: 5rem;
 
 }
 .project-title{
-    width: 15ch;
+    width: 18ch;
     align-self: center;
     font-weight: bold;
     color: var(--accent);

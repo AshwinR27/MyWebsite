@@ -17,7 +17,7 @@ export default function Explore() {
     const mappedEducationData = educationArr.map(data => (
 
             
-            <div className='education-details'>
+            <div className='education-details' key={data.id}>
                 <h1>{data.course}</h1>
                 <h2>{data.instituteName}</h2>
                 <h3>{data.yearRange}</h3>

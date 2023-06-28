@@ -9,14 +9,14 @@ export default function Projects(){
         
          
                 
-                <div className='project-details'>
+                <div className='project-details' key={data.id}>
                     <div className='project-title'>
                         <div>{data.name}</div> 
                     </div>
                     <div className='project-desc'>
                         <div className='project-desc-details'>{data.description}</div>
                         <div className='tech-stack'>
-                            {data.techStack.map(tech => (<div className='tech-stack-element'>{tech} </div>))}
+                            {data.techStack.map(tech => (<div className='tech-stack-element' key={tech}>{tech}</div>))}
                         </div>
                     </div>
                
